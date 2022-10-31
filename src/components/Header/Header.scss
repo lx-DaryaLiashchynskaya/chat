@@ -5,8 +5,8 @@
 .header {
   position: sticky;
   background-color: $header-background-color;
-  height: 40px;
-  padding: 15px 50px;
+  height: $header-height;
+  padding: $header-vertical-padding 100px;
   display: flex;
   justify-content: space-between;
 }
