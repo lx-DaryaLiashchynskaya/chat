@@ -1,4 +1,6 @@
 .body {
   background-image: url("./assets/icons/wallpaper.jpg");
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
