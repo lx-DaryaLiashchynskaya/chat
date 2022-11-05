@@ -3,7 +3,7 @@
 
 .chatsBodyContainer{
   width: 100%;
-  flex-grow: 1;
+  height: calc((100% - (#{$header-height} + #{$header-vertical-padding}*2)));
   display:flex;
   align-items: center;
   justify-content: center;
