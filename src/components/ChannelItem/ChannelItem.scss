@@ -1,0 +1,83 @@
+@use "sass:map";
+@import "./src/styles/sizes";
+@import "./src/styles/colors";
+
+.channelItem {
+  background-color: #fcf7fb;
+  border-radius: $border-radius;
+  padding: $channel-item-padding;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.channelContent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width:90%;
+}
+
+.channelImage {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.channelOwnerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 10px;
+  max-width: calc(100% - (#{$channel-item-padding} * 3));
+
+  & span {
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.channelName {
+  font-weight: bolder;
+  font-size: map.get($font-sizes, "h3");
+}
+
+.channelLastMessage {
+  font-size: map.get($font-sizes, "h4");
+}
+
+.newNotice {
+border-radius: 50%;
+  width:30px;
+  height:30px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  background-color: $channel-notice-color;
+}
+
+.fadeInAnimation {
+  animation: fadeIn 2s;
+}
+
+.fadeOutAnimation {
+  animation: fadeOut 2s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  100% { opacity: 0; }
+ 0% { opacity: 1; }
+}
+
