@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./ChannelItem.scss";
 import { IChannelTemplate } from "../../types/channel";
-
-const CHANNEL_EMPTY_MESSAGE_INFO = "Messages do not exist";
+import {CHANNEL_EMPTY_MESSAGE_INFO} from "../../constants/textPhrases.constants";
 
 export const ChannelItem = ({ channel }: { channel: IChannelTemplate }) => {
   const [isChannelViewed, setIsChannelViewed] = useState(false);

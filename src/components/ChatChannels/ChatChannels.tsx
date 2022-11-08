@@ -1,24 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ChatChannels.scss";
 import { SearchInput } from "../SearchInput/SearchInput";
-import { searchIcon } from "../../assets/icons";
 import { ChannelsContainer } from "../ChannelsContainer/ChannelsContainer";
-
-const SEARCH_INPUT_PLACEHOLDER = "Enter user name for the search...";
+import { CHANNELS_TEMPLATE } from "../../constants/channel.constants";
+import { IChannelTemplate } from "../../types/channel";
+import { SEARCH_INPUT_PLACEHOLDER } from "../../constants/textPhrases.constants";
 
 export const ChatChannels = () => {
-  const onSearchHandler = () => {
-    console.log("click");
-  };
+  const [displayedChannels, setDisplayedChannels] =
+    useState<IChannelTemplate[]>(CHANNELS_TEMPLATE);
 
   return (
     <div className={"chatChannelsContainer"}>
       <SearchInput
         inputPlaceholder={SEARCH_INPUT_PLACEHOLDER}
-        onSearchIconClick={onSearchHandler}
-        searchIcon={searchIcon}
+        data={CHANNELS_TEMPLATE}
+        setFoundChannels={setDisplayedChannels}
       />
-      <ChannelsContainer />
+      <ChannelsContainer displayedChannels={displayedChannels} />
     </div>
   );
 };
