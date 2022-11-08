@@ -6,11 +6,12 @@
   background: $lighter-primary-color;
   padding:10px;
   border-radius: $border-radius;
-  display:flex;
-  justify-content: space-between;
 }
 
 .searchInput {
+  background: $lighter-primary-color;
+  padding:10px;
+  border-radius: $border-radius;
   height:20px;
   width:100%;
   border: none;
