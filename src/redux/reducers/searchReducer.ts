@@ -5,7 +5,7 @@ export const searchReducer = (state = initialState.search, action:any) => {
     case "TOGGLE_SEARCH_LOADING_STATE": {
       return {
         ...state,
-        isContactFormHidden: !state.isSearchInProgress,
+        isSearchInProgress: action.payload,
       };
     }
     default:

@@ -4,15 +4,16 @@ export const addChannel = () => {
   };
 };
 
-export const handleInputChange = (name: string, value:any) => {
+export const handleInputChange = (name: string, value: any) => {
   return {
     type: "HANDLE_INPUT_CHANGE",
     payload: { [name]: value },
   };
 };
 
-export const toggleSearchLoadingState = () => {
+export const toggleSearchLoadingState = (isSearchInProgress: boolean) => {
   return {
     type: "TOGGLE_SEARCH_LOADING_STATE",
+    payload: isSearchInProgress,
   };
 };

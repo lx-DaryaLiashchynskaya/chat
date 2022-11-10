@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import "./ChatChannels.scss";
-import { SearchInput } from "../SearchInput/SearchInput";
+import SearchInput from "../SearchInput/SearchInput";
 import { ChannelsContainer } from "../ChannelsContainer/ChannelsContainer";
 import { CHANNELS_TEMPLATE } from "../../constants/channel.constants";
 import { IChannelTemplate } from "../../types/channel";
 import { SEARCH_INPUT_PLACEHOLDER } from "../../constants/textPhrases.constants";
+import { Loader } from "../Loader/Loader";
+import { connect } from "react-redux";
 
-export const ChatChannels = () => {
+interface IChatChannels {
+  isSearchInProgress: boolean;
+}
+
+const ChatChannels = ({ isSearchInProgress }: IChatChannels) => {
   const [displayedChannels, setDisplayedChannels] =
     useState<IChannelTemplate[]>(CHANNELS_TEMPLATE);
 
@@ -17,7 +23,19 @@ export const ChatChannels = () => {
         data={CHANNELS_TEMPLATE}
         setFoundChannels={setDisplayedChannels}
       />
-      <ChannelsContainer displayedChannels={displayedChannels} />
+      {isSearchInProgress ? (
+        <Loader containerClassName={"searchLoaderContainer"} />
+      ) : (
+        <ChannelsContainer displayedChannels={displayedChannels} />
+      )}
     </div>
   );
 };
+
+const mapStateToProps = (state: any) => {
+  return {
+    isSearchInProgress: state.search.isSearchInProgress,
+  };
+};
+
+export default connect(mapStateToProps, null)(ChatChannels);
