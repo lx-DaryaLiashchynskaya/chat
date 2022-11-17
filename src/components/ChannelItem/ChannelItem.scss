@@ -18,7 +18,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width:90%;
+  width: 90%;
 }
 
 .channelImage {
@@ -54,9 +54,10 @@
 }
 
 .newNotice {
-border-radius: 50%;
-  width:30px;
-  height:30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
   font-weight: bold;
   text-align: center;
   line-height: 30px;
@@ -72,12 +73,19 @@ border-radius: 50%;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  100% { opacity: 0; }
- 0% { opacity: 1; }
+  100% {
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
 }
-
