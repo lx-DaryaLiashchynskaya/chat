@@ -1,0 +1,22 @@
+@import "./src/styles/sizes";
+@import "./src/styles/colors";
+
+.searchLoaderContainer {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatChannelsContainer {
+  height: 80%;
+  background: white;
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px 2px #c9c7c7;
+  width: 25%;
+  margin-right: 35px;
+  padding: 15px;
+  display:flex;
+  flex-direction: column;
+}
