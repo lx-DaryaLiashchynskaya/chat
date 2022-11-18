@@ -1,0 +1,22 @@
+@import "./src/styles/sizes";
+@import "./src/styles/colors";
+
+.chatsBodyContainer{
+  width: 100%;
+  height: calc((100% - (#{$header-height} + #{$header-vertical-padding}*2)));
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column {
+  height: 80%;
+  background: white;
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px 2px  #c9c7c7;
+  padding:15px;
+
+  &.chats {
+    width: 55%;
+  }
+}

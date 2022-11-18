@@ -2,7 +2,7 @@ import React from "react";
 import "./CircleButton.scss";
 
 interface ICircleButton {
-  onAction: () => void;
+  onAction?: () => void;
   buttonImg: string;
 }
 
