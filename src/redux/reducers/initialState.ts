@@ -6,4 +6,7 @@ export const initialState = {
   search: {
     isSearchInProgress: false,
   },
+  loggedUser: {
+    info: null,
+  },
 };
