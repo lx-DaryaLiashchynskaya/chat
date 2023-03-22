@@ -3,7 +3,7 @@
 
 .tooltip {
   position: absolute;
-  left: -62%;
+  left: -45%;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -12,10 +12,7 @@
   text-align: left;
   text-shadow: none;
   text-transform: none;
-  white-space: normal;
-  word-break: normal;
-  word-spacing: normal;
-  word-wrap: normal;
+  white-space: nowrap;
   font-size: map.get($font-sizes, "h6");
   padding: 15px 20px;
   margin-top: 3px;
