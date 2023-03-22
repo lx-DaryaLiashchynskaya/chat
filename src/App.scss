@@ -1,4 +1,5 @@
 @import "../src/styles/colors.scss";
+@import "./src/styles/sizes";
 
 .body {
   background-image: url("./assets/icons/wallpaper.jpg");
@@ -6,4 +7,12 @@
   display: flex;
   flex-direction: column;
   color: $text-color;
+}
+
+.authenticationLoader {
+  width: 100%;
+  height: calc((100% - (#{$header-height} + #{$header-vertical-padding}*2)));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
