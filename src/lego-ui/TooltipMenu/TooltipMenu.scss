@@ -1,0 +1,36 @@
+@use "sass:map";
+@import "./src/styles/sizes";
+
+.tooltip {
+  position: absolute;
+  left: -62%;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.42857143;
+  text-align: left;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  font-size: map.get($font-sizes, "h6");
+  padding: 15px 20px;
+  margin-top: 3px;
+  background-color: white;
+  border-radius: $tooltip-border-radius;
+  box-shadow: 0 0 10px 2px  #c9c7c7;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  transform: rotate(45deg);
+  background-color: white;
+  padding: 5px;
+  z-index: 1;
+  top: -5%;
+  left: 45%;
+}
