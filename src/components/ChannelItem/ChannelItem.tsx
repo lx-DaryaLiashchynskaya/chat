@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./ChannelItem.scss";
+import "../../styles/fadeAnimation.scss";
 import { IChannelTemplate } from "../../types/channel";
 import {CHANNEL_EMPTY_MESSAGE_INFO} from "../../constants/textPhrases.constants";
 

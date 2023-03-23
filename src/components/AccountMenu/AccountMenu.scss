@@ -1,0 +1,17 @@
+@use "sass:map";
+@import "./src/styles/colors";
+@import "./src/styles/sizes";
+
+.accountTooltipContainer {
+  position: relative;
+}
+
+.signOutButton{
+  font-size: map.get($font-sizes, "h5");
+  font-weight: 400;
+  text-decoration: $text-color;
+}
+
+.signOutButton:hover{
+  text-decoration: underline;
+}

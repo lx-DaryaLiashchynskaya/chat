@@ -63,29 +63,3 @@
   line-height: 30px;
   background-color: $channel-notice-color;
 }
-
-.fadeInAnimation {
-  animation: fadeIn 2s;
-}
-
-.fadeOutAnimation {
-  animation: fadeOut 2s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  100% {
-    opacity: 0;
-  }
-  0% {
-    opacity: 1;
-  }
-}

@@ -8,8 +8,11 @@ interface ICircleButton {
 
 export const CircleButton = ({ onAction, buttonImg }: ICircleButton) => {
   return (
-    <button onClick={onAction} className={"circleButton"}>
-      <img src={buttonImg} className={"circleButtonImage"} alt={""} />
-    </button>
+    <img
+      onClick={onAction}
+      src={buttonImg}
+      className={"circleButtonImage"}
+      alt={""}
+    />
   );
 };
