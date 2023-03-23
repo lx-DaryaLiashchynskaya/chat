@@ -1,7 +1,7 @@
 import { onAuthStateChanged } from "firebase/auth";
 import { auth, signInWithGoogle } from "../firebase/firebaseGoogleAuth";
 import { ILoggedUser } from "../types/loggedUser";
-import { writeUserData } from "../firebase/firebase";
+import { writeUserData } from "../firebase/firebaseUserData";
 
 export const callAuthCheck = (
   setIsSignIn: (isSignIn: boolean) => void,
